@@ -1,33 +1,47 @@
-# Blog Management REST API
+# Blog Management Platform (Full-Stack)
 
-## Tech Stack
-- Node.js
-- Express.js
-- PostgreSQL
-- JWT Authentication
+A complete full-stack Blog Management web application featuring a **Node.js / Express REST API** backend with **PostgreSQL & JWT authentication**, and a modern, responsive **React 18** frontend.
 
-## Features
-- User Registration & Login (JWT)
-- CRUD operations for blog posts
-- Protected routes using middleware
-- Search blogs by title
-- Pagination support
-- Proper error handling
+---
 
-## API Endpoints
+## 📁 Repository Structure
 
-### Auth
-POST /api/auth/register  
-POST /api/auth/login  
+```
+blog-api/
+├── backend/          # Express REST API, PostgreSQL database & JWT auth
+└── frontend/         # React 18 single-page application built with Vite
+```
 
-### Blogs
-GET /api/blogs?search=node&page=1&limit=5  
-GET /api/blogs/:id  
-POST /api/blogs (Protected)  
-PUT /api/blogs/:id (Protected)  
-DELETE /api/blogs/:id (Protected)
+---
 
-## Run Locally
+## 🚀 Quick Start
+
+### 1. Start the Backend API
 ```bash
+cd backend
 npm install
 npm start
+# Server runs on http://localhost:3001
+```
+
+### 2. Start the Frontend Application
+```bash
+cd frontend
+npm install
+npm run dev
+# Frontend runs on http://localhost:3000
+```
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend**: React 18, React Router v6, Plain CSS (Variables & Dark Mode), Fetch API, Vite
+- **Backend**: Node.js, Express.js, PostgreSQL (`pg`), JWT Authentication (`jsonwebtoken`), `bcrypt`
+- **Features**:
+  - User Registration & Login with JWT
+  - Protected blog creation and editing
+  - Resource authorization (only authors can edit or delete their own posts)
+  - Blog search by title
+  - Pagination support
+  - Responsive mobile-first UI with dark mode support
